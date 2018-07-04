@@ -1,0 +1,32 @@
+
+<%= provide(:title, @user.name) %>
+
+<div class="row">
+	<div class="col-md-4">
+		<section class="user_info">
+			<%= render "shared/user_info" %>
+		</section>
+
+		<section>
+			<%= render "shared/stats" %>
+		</section>
+		
+		<% unless current_user?(@user) %>
+		<section>
+			<%= render "follow_form" %>
+		</section>
+		<% end %>
+
+	</div>
+
+	<div class="col-md-8">
+		
+		<h3>Microposts</h3>
+		
+		<ul class="microposts">
+			<%= render @microposts %>
+		</ul>
+		<%= will_paginate @microposts %>
+	</div>
+</div>
+

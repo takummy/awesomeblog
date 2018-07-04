@@ -1,0 +1,5 @@
+<%= button_to current_user.votes.find_by(micropost: micropost), 
+			method: :delete, class: 'btn btn-default btn-xs', remote: true do %>
+
+		<i class="glyphicon glyphicon-arrow-down"></i> 
+<% end %>

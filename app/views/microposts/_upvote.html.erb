@@ -1,0 +1,5 @@
+<%= button_to current_user.votes.build, 
+			params: { micropost_id: micropost.id }, 
+			class: 'btn btn-warning btn-xs', remote: true do  %>
+				<i class="glyphicon glyphicon-arrow-up"></i> 
+<% end %>
